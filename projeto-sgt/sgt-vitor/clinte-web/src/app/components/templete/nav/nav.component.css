@@ -1,0 +1,16 @@
+.sidnav{
+    background: linear-gradient( black,aliceblue) ;
+    width: 200px;
+}
+.sidnav a{
+    color: white ;
+}
+
+.sidnav i{
+    padding-right: 10px;
+}
+
+.content{
+    padding: 16px;
+    background-color: #fff;
+}

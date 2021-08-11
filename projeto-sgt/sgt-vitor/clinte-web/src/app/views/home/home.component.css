@@ -1,0 +1,11 @@
+ .titulo{
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+.subtitulo{
+    font-size: 1.1rem;
+}
+.img-home{
+    max-height: 600px;
+}

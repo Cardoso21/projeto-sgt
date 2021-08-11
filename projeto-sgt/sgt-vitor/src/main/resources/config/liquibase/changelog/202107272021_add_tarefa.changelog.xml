@@ -1,0 +1,28 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet id="202107272021-0" author="vitor.botelho">
+        <createTable tableName="tb_tarefa">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+
+            <column name="data_efetiva" type="date"/>
+            <column name="data_inicial" type="date"/>
+            <column name="data_prevista" type="date"/>
+            <column name="status" type="varchar(20)"/>
+            <column name="tipo_tarefa" type="varchar(80)"/>
+            <column name="titulo" type="varchar(80)"/>
+            <column name="id_responsavel" type="bigint"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="202107272021-1" author="vitor.botelho">
+        <addForeignKeyConstraint baseTableName="tb_tarefa"
+                                 baseColumnNames="id_responsavel"
+                                 constraintName="FK_RESPONSAVEL_TAREFA"
+                                 referencedTableName="tb_responsavel"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+</databaseChangeLog>
