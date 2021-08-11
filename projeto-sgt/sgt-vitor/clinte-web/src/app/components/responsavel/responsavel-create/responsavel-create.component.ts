@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ResponsavelService} from "../responsavel.service";
 import {Router} from "@angular/router";
+import {Responsavel} from "../responsavel.model";
 
 
 @Component({
@@ -10,6 +11,13 @@ import {Router} from "@angular/router";
 })
 export class ResponsavelCreateComponent implements OnInit {
 
+  responsavel: Responsavel ={
+
+    id: '',
+    nome: 'gdgdghhjj',
+    email: 'wagner@gmail.com'
+  }
+
   constructor(private responsavelService: ResponsavelService,
               private router: Router) { }
 
@@ -17,11 +25,15 @@ export class ResponsavelCreateComponent implements OnInit {
 
   }
   createResponsavel(): void{
-    this.responsavelService.showMenssage('Responsavel criado!')
+    this.responsavelService.create(this.responsavel).subscribe(()=>{
+      this.responsavelService.showMenssage('Responsavel criado!')
+      this.router.navigate(['Responsavel'])
+    })
+
   }
 
   cancel(): void{
-    this.router.navigate(['responsavel'])
+    this.router.navigate(['Responsavel'])
   }
 
 }
