@@ -18,8 +18,7 @@ export class TarefasCreateComponent implements OnInit {
     dataEfetiva: '',
     tipoTarefa: '',
     status: '',
-    comentarios: '',
-    idResponsavel:'',
+    idResponsavel:''
 
   }
 

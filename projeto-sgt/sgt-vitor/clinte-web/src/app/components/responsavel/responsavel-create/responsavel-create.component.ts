@@ -14,8 +14,8 @@ export class ResponsavelCreateComponent implements OnInit {
   responsavel: Responsavel ={
 
     id: '',
-    nome: 'gdgdghhjj',
-    email: 'wagner@gmail.com'
+    nome: '',
+    email: ''
   }
 
   constructor(private responsavelService: ResponsavelService,

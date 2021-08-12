@@ -6,6 +6,5 @@ export interface Tarefas {
     dataEfetiva: string
     tipoTarefa: string
     status: string
-    comentarios: string
-    idResponsavel:string
+    idResponsavel:any
 }
