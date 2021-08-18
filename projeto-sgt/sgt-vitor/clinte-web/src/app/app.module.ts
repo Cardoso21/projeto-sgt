@@ -32,7 +32,7 @@ import { TarefasDeleteComponent } from './components/tarefas/tarefas-delete/tare
 import { ResponsavelReadComponent } from './components/responsavel/responsavel-read/responsavel-read.component';
 import { ResponsavelUpdateComponent } from './components/responsavel/responsavel-update/responsavel-update.component';
 import { ResponsavelDeleteComponent } from './components/responsavel/responsavel-delete/responsavel-delete.component';
-
+import {MatDatepickerModule} from "@angular/material/datepicker";
 
 
 
@@ -71,8 +71,8 @@ import { ResponsavelDeleteComponent } from './components/responsavel/responsavel
     FormsModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
-
+    MatSortModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

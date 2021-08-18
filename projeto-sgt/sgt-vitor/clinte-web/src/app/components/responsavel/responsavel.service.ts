@@ -39,8 +39,12 @@ export class ResponsavelService {
     return this.http.get<Responsavel>(url)
     }
   update(responsavel:Responsavel):  Observable<Responsavel>{
-    const url = `${this.baseUrl}${responsavel.id}`
+    const url = `${this.baseUrl}/${responsavel.id}`
     return this.http.put<Responsavel>(url, responsavel)
   }
+  delete(id:string): Observable<Responsavel>{
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.delete<Responsavel>(url);
   }
+}
 

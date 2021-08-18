@@ -33,7 +33,7 @@ export class TarefasDeleteComponent implements OnInit {
   }
 apagar(): void{
       this.tarafaService.delete(this.idupdate).subscribe(() =>{
-          this.tarafaService.showMessege('Tarefa excluida com sucesso')
+          this.tarafaService.showMessege('Tarefa excluida com sucesso!')
           this.router.navigate(['Tarefa']);
       })
   }

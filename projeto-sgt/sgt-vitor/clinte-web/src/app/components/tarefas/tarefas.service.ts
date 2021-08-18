@@ -38,7 +38,7 @@ export class TarefasService {
   }
 
   update(tarefa:Tarefa): Observable<Tarefa> {
-    const url = `${this.baseUrl}${tarefa.id}`
+    const url = `${this.baseUrl}/${tarefa.id}`
     return this.http.put<Tarefa>(url, tarefa)
   }
 

@@ -7,21 +7,33 @@
         </mat-form-field>
     </form>
     <form>
-        <mat-form-field>
-            <input matInput placeholder="Data Inicial"
-                   [(ngModel)]="dtInicial" name ="dataInicial">
+        <mat-form-field appear = "fill">
+            <mat-label>data inicial</mat-label>
+            <input matInput [matDatepicker]="dataInicial">
+            <mat-datepicker-toggle matSuffix [for]="dataInicial"></mat-datepicker-toggle>
+            <mat-datepicker #dataInicial></mat-datepicker>
+<!--            <input matInput placeholder="Data Inicial"-->
+<!--                   [(ngModel)]="dtInicial" name ="dataInicial">-->
         </mat-form-field>
     </form>
     <form>
-        <mat-form-field>
-            <input matInput placeholder="Data Previsa"
-                   [(ngModel)]="dtPrevista" name = datePrevista>
+        <mat-form-field appear = "fill">
+            <mat-label>data prevista</mat-label>
+            <input matInput [matDatepicker]="dataPrevista">
+            <mat-datepicker-toggle matSuffix [for]="dataPrevista"></mat-datepicker-toggle>
+            <mat-datepicker #dataPrevista></mat-datepicker>
+<!--            <input matInput placeholder="Data Previsa"-->
+<!--                   [(ngModel)]="dtPrevista" name = datePrevista>-->
         </mat-form-field>
     </form>
     <form>
-        <mat-form-field>
-            <input matInput placeholder="Data Efetiva"
-                   [(ngModel)]=" dtEfetiva" name = "dataEfetiva">
+        <mat-form-field appear = "fill">
+            <mat-label>data efetiva</mat-label>
+            <input matInput [matDatepicker]="dataEfetiva">
+            <mat-datepicker-toggle matSuffix [for]="dataEfetiva"></mat-datepicker-toggle>
+            <mat-datepicker #dataEfetiva></mat-datepicker>
+<!--            <input matInput placeholder="Data Efetiva"-->
+<!--                   [(ngModel)]=" dtEfetiva" name = "dataEfetiva">-->
         </mat-form-field>
     </form>
     <form>

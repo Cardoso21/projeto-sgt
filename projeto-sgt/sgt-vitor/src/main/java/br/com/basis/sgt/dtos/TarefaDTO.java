@@ -1,8 +1,8 @@
 package br.com.basis.sgt.dtos;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
+
 import enums.StatusTarefa;
-import lombok.Data;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -22,14 +22,14 @@ public class TarefaDTO {
 	private String titulo;
 
 	@Future(message = "A data deve ser do futuro !")
-//	@JsonFormat(pattern = "dd/MM/yyyy HH:SS")
+	//@JsonFormat(pattern = "dd/MM/yyyy HH:SS")
 	private LocalDateTime dataInicial;
 
 	@Future(message = "A data deve ser do futuro !")
-//	@JsonFormat(pattern = "dd/MM/yyyy HH:SS")
+	//@JsonFormat(pattern = "dd/MM/yyyy HH:SS")
 	private LocalDateTime dataPrevista;
 
-//	@JsonFormat(pattern = "dd/MM/yyyy HH:SS")
+	//@JsonFormat(pattern = "dd/MM/yyyy HH:SS")
 	private LocalDateTime dataEfetiva;
 
 	private String tipoTarefa;

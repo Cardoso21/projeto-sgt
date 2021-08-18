@@ -30,7 +30,7 @@ export class ResponsavelUpdateComponent implements OnInit {
   updateResponsavel():void{
       this.responsavelService.update(this.responsavel).subscribe(()=>{
           this.responsavelService.showMenssage('Responsavel atualizado com sucesso!')
-          this.router.navigate([this.responsavel]);
+          this.router.navigate(['Responsavel']);
       })
   }
 

@@ -2,7 +2,7 @@
     <mat-card-title>Deletar Tarefa</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="Titulo"
+            <input matInput placeholder="id"
                    [(ngModel)]="tarefa.titulo" name ="titulo">
         </mat-form-field>
     </form>
@@ -18,31 +18,6 @@
                    [(ngModel)]="tarefa.dataPrevista" name = datePrevista>
         </mat-form-field>
     </form>
-    <form>
-        <mat-form-field>
-            <input matInput placeholder="Data Efetiva"
-                   [(ngModel)]="tarefa.dataEfetiva" name = "dataEfetiva">
-        </mat-form-field>
-    </form>
-    <form>
-        <mat-form-field>
-            <input matInput placeholder="Tipo de Tarefa"
-                   [(ngModel)]="tarefa.tipoTarefa" name="tipoTarefa">
-        </mat-form-field>
-    </form>
-    <form>
-        <mat-form-field>
-            <input matInput placeholder="Status"
-                   [(ngModel)]="tarefa.status" name="status">
-        </mat-form-field>
-    </form>
-    <form>
-        <mat-form-field>
-            <input matInput placeholder="Id Responsavel"
-                   [(ngModel)]=" tarefa.idResponsavel" name="idResponsavel">
-        </mat-form-field>
-    </form>
-
 
     <button mat-raised-button (click)="apagar()">
        Deletar

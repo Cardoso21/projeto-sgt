@@ -8,6 +8,7 @@ import {TarefasCreateComponent} from "./components/tarefas/tarefas-create/tarefa
 import {ResponsavelCreateComponent} from "./components/responsavel/responsavel-create/responsavel-create.component";
 import {TarefasUpdateComponent} from "./components/tarefas/tarefas-update/tarefas-update.component";
 import {TarefasDeleteComponent} from "./components/tarefas/tarefas-delete/tarefas-delete.component";
+import {ResponsavelUpdateComponent} from "./components/responsavel/responsavel-update/responsavel-update.component";
 
 const routes: Routes = [{
   path:"",
@@ -37,7 +38,16 @@ const routes: Routes = [{
   {
     path: "responsavel/create",
     component:ResponsavelCreateComponent
+  },
+  {
+    path: "responsavel/update/:id",
+    component:ResponsavelUpdateComponent
+  },
+  {
+    path: "responsavel/delete/:id",
+    component:ResponsavelUpdateComponent
   }
+
 
 
 ];

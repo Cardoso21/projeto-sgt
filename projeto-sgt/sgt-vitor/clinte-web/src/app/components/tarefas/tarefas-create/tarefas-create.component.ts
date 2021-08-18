@@ -3,15 +3,20 @@ import {TarefasService} from "../tarefas.service";
 import {Router} from "@angular/router";
 import {Tarefa} from "../tarefas.model";
 
+
+interface DatepickerOverviewExample {
+}
+
 @Component({
   selector: 'app-tarefas-create',
   templateUrl: './tarefas-create.component.html',
-  styleUrls: ['./tarefas-create.component.css']
+  styleUrls: ['./tarefas-create.component.css'],
+
 })
-export class TarefasCreateComponent implements OnInit {
-  dtInicial: Date= new Date();
-  dtPrevista: Date= new Date();
-  dtEfetiva: Date= new Date();
+export class TarefasCreateComponent implements DatepickerOverviewExample {
+  // dtInicial: Date= new Date();
+  // dtPrevista: Date= new Date();
+  // dtEfetiva: Date= new Date();
 
   tarefa: Tarefa= {
     id: '',
@@ -33,9 +38,9 @@ export class TarefasCreateComponent implements OnInit {
   }
 
   createTarefas(): void {
-    this.tarefa.dataInicial=this.dtInicial.toISOString()
-    this.tarefa.dataPrevista=this.dtPrevista.toISOString()
-    this.tarefa.dataEfetiva=this.dtEfetiva.toISOString()
+    // this.tarefa.dataInicial=this.dtInicial.toISOString()
+    // this.tarefa.dataPrevista=this.dtPrevista.toISOString()
+    // this.tarefa.dataEfetiva=this.dtEfetiva.toISOString()
     this.tarefasService.create(this.tarefa).subscribe(() => {
       this.tarefasService.showMessege('Tarefa criada!!')
       this.router.navigate(['/Tarefas'])
