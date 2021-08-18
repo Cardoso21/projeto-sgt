@@ -12,10 +12,11 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
 import java.net.URI;
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/tarefas")
-@CrossOrigin()
+@CrossOrigin("*")
 public class TarefaResource {
 
 	
@@ -29,15 +30,10 @@ public class TarefaResource {
 	}
 	
 	@GetMapping
-	public ResponseEntity<Page<TarefaDTO>> findAllPaged(
-			@RequestParam(value = "page", defaultValue = "0") Integer page,
-			@RequestParam(value = "size", defaultValue = "10") Integer size,
-			@RequestParam(value = "direction", defaultValue = "ASC") String direction,
-			@RequestParam(value = "orderBy", defaultValue = "dataInicial") String orderBy){
-		
-		PageRequest request = PageRequest.of(page, size, Direction.valueOf(direction), orderBy);	
-		Page<TarefaDTO> pages = service.findAllPage(request);
-		return ResponseEntity.ok(pages);
+	public ResponseEntity<List<TarefaDTO>> findAll(){
+
+		List<TarefaDTO> list = service.findAll();
+		return ResponseEntity.ok(list);
 		
 	}
 	

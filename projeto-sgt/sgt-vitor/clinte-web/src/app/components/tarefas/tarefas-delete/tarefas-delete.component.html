@@ -1,5 +1,5 @@
 <mat-card>
-    <mat-card-title>Nova Tarefa</mat-card-title>
+    <mat-card-title>Deletar Tarefa</mat-card-title>
     <form>
         <mat-form-field>
             <input matInput placeholder="Titulo"
@@ -9,19 +9,19 @@
     <form>
         <mat-form-field>
             <input matInput placeholder="Data Inicial"
-                   [(ngModel)]="dtInicial" name ="dataInicial">
+                   [(ngModel)]="tarefa.dataInicial" name ="dataInicial">
         </mat-form-field>
     </form>
     <form>
         <mat-form-field>
             <input matInput placeholder="Data Previsa"
-                   [(ngModel)]="dtPrevista" name = datePrevista>
+                   [(ngModel)]="tarefa.dataPrevista" name = datePrevista>
         </mat-form-field>
     </form>
     <form>
         <mat-form-field>
             <input matInput placeholder="Data Efetiva"
-                   [(ngModel)]=" dtEfetiva" name = "dataEfetiva">
+                   [(ngModel)]="tarefa.dataEfetiva" name = "dataEfetiva">
         </mat-form-field>
     </form>
     <form>
@@ -37,24 +37,20 @@
         </mat-form-field>
     </form>
     <form>
-       <mat-form-field>
+        <mat-form-field>
             <input matInput placeholder="Id Responsavel"
                    [(ngModel)]=" tarefa.idResponsavel" name="idResponsavel">
-       </mat-form-field>
+        </mat-form-field>
     </form>
 
 
-        <button mat-raised-button (click)="createTarefas()">
-            Salvar
-        </button>
+    <button mat-raised-button (click)="apagar()">
+       Deletar
+    </button>
 
-        <button mat-raised-button (click)="cancel()">
-            Cancel
-        </button>
+    <button mat-raised-button (click)="cancel()">
+        Cancel
+    </button>
 
 
 </mat-card>
-
-
-
-

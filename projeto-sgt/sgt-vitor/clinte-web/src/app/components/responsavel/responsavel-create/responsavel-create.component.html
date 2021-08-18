@@ -1,5 +1,5 @@
 <mat-card>
-    <mat-card-title>Nova Tarefa</mat-card-title>
+    <mat-card-title>Criar Responsavel</mat-card-title>
     <form>
         <mat-form-field>
             <input matInput placeholder="Nome"
@@ -12,11 +12,12 @@
                    [(ngModel)]="responsavel.email" name="email">
         </mat-form-field>
     </form>
-</mat-card>
-<button mat-raised-button (click)="(createResponsavel())">
-    Salvar
-</button>
+    <button mat-raised-button (click)="(createResponsavel())">
+        Salvar
+    </button>
 
-<button mat-raised-button (click)="(cancel())">
-    Cancelar
-</button>
+    <button mat-raised-button (click)="(cancel())">
+        Cancelar
+    </button>
+</mat-card>
+

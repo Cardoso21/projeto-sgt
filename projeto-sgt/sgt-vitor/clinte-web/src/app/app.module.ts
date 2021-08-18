@@ -23,6 +23,17 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import { ResponsavelCreateComponent } from './components/responsavel/responsavel-create/responsavel-create.component';
 
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { TarefasReadComponent } from './components/tarefas/tarefas-read/tarefas-read.component';
+import { TarefasUpdateComponent } from './components/tarefas/tarefas-update/tarefas-update.component';
+import { TarefasDeleteComponent } from './components/tarefas/tarefas-delete/tarefas-delete.component';
+import { ResponsavelReadComponent } from './components/responsavel/responsavel-read/responsavel-read.component';
+import { ResponsavelUpdateComponent } from './components/responsavel/responsavel-update/responsavel-update.component';
+import { ResponsavelDeleteComponent } from './components/responsavel/responsavel-delete/responsavel-delete.component';
+
+
 
 
 @NgModule({
@@ -35,7 +46,14 @@ import { ResponsavelCreateComponent } from './components/responsavel/responsavel
     TarefasComponent,
     ResponsvelComponent,
     TarefasCreateComponent,
-    ResponsavelCreateComponent
+    ResponsavelCreateComponent,
+    TarefasReadComponent,
+    TarefasUpdateComponent,
+    TarefasDeleteComponent,
+    ResponsavelReadComponent,
+    ResponsavelUpdateComponent,
+    ResponsavelDeleteComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -50,7 +68,10 @@ import { ResponsavelCreateComponent } from './components/responsavel/responsavel
     HttpClientModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
 
   ],
   providers: [],

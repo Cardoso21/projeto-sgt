@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {TarefasService} from "../tarefas.service";
 import {Router} from "@angular/router";
-import {Tarefas} from "../tarefas.model";
+import {Tarefa} from "../tarefas.model";
 
 @Component({
   selector: 'app-tarefas-create',
@@ -9,8 +9,11 @@ import {Tarefas} from "../tarefas.model";
   styleUrls: ['./tarefas-create.component.css']
 })
 export class TarefasCreateComponent implements OnInit {
+  dtInicial: Date= new Date();
+  dtPrevista: Date= new Date();
+  dtEfetiva: Date= new Date();
 
-  tarefa: Tarefas = {
+  tarefa: Tarefa= {
     id: '',
     titulo: '',
     dataInicial: '',
@@ -30,9 +33,12 @@ export class TarefasCreateComponent implements OnInit {
   }
 
   createTarefas(): void {
+    this.tarefa.dataInicial=this.dtInicial.toISOString()
+    this.tarefa.dataPrevista=this.dtPrevista.toISOString()
+    this.tarefa.dataEfetiva=this.dtEfetiva.toISOString()
     this.tarefasService.create(this.tarefa).subscribe(() => {
       this.tarefasService.showMessege('Tarefa criada!!')
-      this.router.navigate(['/Tarefa'])
+      this.router.navigate(['/Tarefas'])
     })
 
   }

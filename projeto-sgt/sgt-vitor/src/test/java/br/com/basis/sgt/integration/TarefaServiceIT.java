@@ -11,13 +11,14 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.domain.Page;
+
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.List;
 
 
 @SpringBootTest
@@ -70,10 +71,11 @@ public class TarefaServiceIT {
     }
 
     @Test
-    public void findAllPageDeveriaTrazerTarefas(){
-        Page<TarefaDTO> pag = service.findAllPage(pageRequest);
+    public void findAllDeveriaTrazerTarefas(){
+        List<TarefaDTO> pag = service.findAll();
         Assertions.assertFalse(pag.isEmpty());
-        Assertions.assertEquals(quantidadeTarefas, pag.getTotalElements());
+        Assertions.assertEquals(quantidadeTarefas,pag.size());
+
     }
    @Test
     public void savarDeveriaPersistirNovaEntidadeComIdAutoIncrementavel(){

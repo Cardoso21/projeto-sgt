@@ -1,0 +1,34 @@
+<mat-card>
+    <mat-card-title>Alterar  Responsavel</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Id"
+                   [(ngModel)]="responsavel.id" name ="id">
+        </mat-form-field>
+    </form>
+    <form>
+
+        <mat-form-field>
+            <input matInput placeholder="Nome"
+                   [(ngModel)]="responsavel.nome" name ="nome">
+        </mat-form-field>
+    </form>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="E-mail"
+                   [(ngModel)]="responsavel.email" name ="email">
+        </mat-form-field>
+    </form>
+
+
+
+    <button mat-raised-button (click)="updateResponsavel()">
+        atualizar
+    </button>
+
+    <button mat-raised-button (click)="cancel()">
+        Cancel
+    </button>
+
+
+</mat-card>

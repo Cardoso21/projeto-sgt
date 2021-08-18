@@ -1,10 +1,10 @@
-export interface Tarefas {
+export interface Tarefa {
     id?: any;
-    titulo: string
-    dataInicial: string
-    dataPrevista: string
-    dataEfetiva: string
-    tipoTarefa: string
-    status: string
-    idResponsavel:any
+    titulo: string;
+    dataInicial: string;
+    dataPrevista: string;
+    dataEfetiva: string;
+    tipoTarefa: string;
+    status: string;
+    idResponsavel:any;
 }

@@ -1,9 +1,5 @@
 package br.com.basis.sgt.dtos;
 
-
-
-
-
 public class ComentarioDTO {
     private Long id;
     private String texto;

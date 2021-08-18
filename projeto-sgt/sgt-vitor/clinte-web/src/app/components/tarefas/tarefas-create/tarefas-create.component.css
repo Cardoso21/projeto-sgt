@@ -1,8 +1,11 @@
-.butoes{
-    margin-top: 12px;
-    float: right;
-}
+
 form{
     display: flex;
 
 }
+button{
+    margin-top: 15px;
+    margin-right: 10px ;
+
+
+ }
