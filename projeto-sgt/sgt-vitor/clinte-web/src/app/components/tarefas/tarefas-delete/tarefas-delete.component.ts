@@ -10,7 +10,7 @@ import {Tarefa} from "../tarefas.model";
 })
 export class TarefasDeleteComponent implements OnInit {
 
-  idupdate= ''
+  idupdate = ''
   tarefa: Tarefa= {
     id: '',
     titulo: '',

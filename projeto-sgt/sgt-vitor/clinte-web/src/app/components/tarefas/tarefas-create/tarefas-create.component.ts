@@ -14,9 +14,9 @@ interface DatepickerOverviewExample {
 
 })
 export class TarefasCreateComponent implements DatepickerOverviewExample {
-  // dtInicial: Date= new Date();
-  // dtPrevista: Date= new Date();
-  // dtEfetiva: Date= new Date();
+  dtInicial: Date= new Date();
+  dtPrevista: Date= new Date();
+  dtEfetiva: Date= new Date();
 
   tarefa: Tarefa= {
     id: '',
@@ -38,16 +38,16 @@ export class TarefasCreateComponent implements DatepickerOverviewExample {
   }
 
   createTarefas(): void {
-    // this.tarefa.dataInicial=this.dtInicial.toISOString()
-    // this.tarefa.dataPrevista=this.dtPrevista.toISOString()
-    // this.tarefa.dataEfetiva=this.dtEfetiva.toISOString()
+    this.tarefa.dataInicial=this.dtInicial.toISOString()
+    this.tarefa.dataPrevista=this.dtPrevista.toISOString()
+    this.tarefa.dataEfetiva=this.dtEfetiva.toISOString()
     this.tarefasService.create(this.tarefa).subscribe(() => {
       this.tarefasService.showMessege('Tarefa criada!!')
-      this.router.navigate(['/Tarefas'])
+      this.router.navigate(['Tarefa'])
     })
 
   }
   cancel(): void {
-    this.router.navigate(['/Tarefa'])
+    this.router.navigate(['Tarefa'])
   }
 }

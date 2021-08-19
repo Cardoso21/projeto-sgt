@@ -12,8 +12,8 @@
             <input matInput [matDatepicker]="dataInicial">
             <mat-datepicker-toggle matSuffix [for]="dataInicial"></mat-datepicker-toggle>
             <mat-datepicker #dataInicial></mat-datepicker>
-<!--            <input matInput placeholder="Data Inicial"-->
-<!--                   [(ngModel)]="dtInicial" name ="dataInicial">-->
+            <!--            <input matInput placeholder="Data Inicial"-->
+            <!--                   [(ngModel)]="dtInicial" name ="dataInicial">-->
         </mat-form-field>
     </form>
     <form>
@@ -22,8 +22,8 @@
             <input matInput [matDatepicker]="dataPrevista">
             <mat-datepicker-toggle matSuffix [for]="dataPrevista"></mat-datepicker-toggle>
             <mat-datepicker #dataPrevista></mat-datepicker>
-<!--            <input matInput placeholder="Data Previsa"-->
-<!--                   [(ngModel)]="dtPrevista" name = datePrevista>-->
+            <!--            <input matInput placeholder="Data Previsa"-->
+            <!--                   [(ngModel)]="dtPrevista" name = datePrevista>-->
         </mat-form-field>
     </form>
     <form>
@@ -32,8 +32,8 @@
             <input matInput [matDatepicker]="dataEfetiva">
             <mat-datepicker-toggle matSuffix [for]="dataEfetiva"></mat-datepicker-toggle>
             <mat-datepicker #dataEfetiva></mat-datepicker>
-<!--            <input matInput placeholder="Data Efetiva"-->
-<!--                   [(ngModel)]=" dtEfetiva" name = "dataEfetiva">-->
+            <!--            <input matInput placeholder="Data Efetiva"-->
+            <!--                   [(ngModel)]=" dtEfetiva" name = "dataEfetiva">-->
         </mat-form-field>
     </form>
     <form>
@@ -49,24 +49,20 @@
         </mat-form-field>
     </form>
     <form>
-       <mat-form-field>
+        <mat-form-field>
             <input matInput placeholder="Id Responsavel"
                    [(ngModel)]=" tarefa.idResponsavel" name="idResponsavel">
-       </mat-form-field>
+        </mat-form-field>
     </form>
 
 
-        <button mat-raised-button (click)="createTarefas()">
-            Salvar
-        </button>
+    <button mat-raised-button (click)="createTarefas()">
+        Salvar
+    </button>
 
-        <button mat-raised-button (click)="cancel()">
-            Cancel
-        </button>
+    <button mat-raised-button (click)="cancel()">
+        Cancel
+    </button>
 
 
 </mat-card>
-
-
-
-

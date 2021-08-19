@@ -77,7 +77,7 @@ public class TarefaServiceIT {
         Assertions.assertEquals(quantidadeTarefas,pag.size());
 
     }
-   @Test
+    @Test
     public void savarDeveriaPersistirNovaEntidadeComIdAutoIncrementavel(){
         TarefaDTO tarefaDTO = getTarefaDTO();
         tarefaDTO.setId(null);
